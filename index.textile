@@ -31,9 +31,9 @@ Følgende liste gir en oversikt over de klasser som er brukt i Oppslagstjenesten
 {% assign sortedPages = site.pages | sort: 'title' %}
 
 {% for page in sortedPages %}
-    {% if page.group == "Oppslagstjenesten/complexType" and (page.url contains site.version or site.version == "HEAD") %}
+    {% if page.group == "Oppslagstjenesten/complexType"%}
 	<li>	
-		<a href="{{pageUrlMinor}}">{{page.title}}</a>		
+		<a href="{{page.title}}">{{page.title}}</a>		
 	</li>
     {% endif %}
 {% endfor %}
@@ -44,9 +44,9 @@ h3. Tjenester for offentlige virksomheter:
 Følgende forespørslser er tilgjengelig i Oppslagstjenesten for offentlige virksomheter
 <ul>
 {% for page in sortedPages %}
-    {% if page.group == "Oppslagstjenesten/Metode" and (page.url contains site.version or site.version == "HEAD") %}
+    {% if page.group == "Oppslagstjenesten/Metode" %}
 	<li>	
-		<a href="{pageUrlMinor}}">{{page.title}}</a>		
+		<a href="{page.title}}">{{page.title}}</a>		
 	</li>
     {% endif %}
 {% endfor %}
@@ -58,9 +58,9 @@ Postkasseleverandører har følgende forespørsler tilgjengelig i oppslagstjenes
 
 <ul>
 {% for page in sortedPages %}
-    {% if page.group == "Oppslagstjenesten/PK_Metode" and (page.url contains site.version or site.version == "HEAD") %}
+    {% if page.group == "Oppslagstjenesten/PK_Metode" %}
 	<li>	
-		<a href="{{pageUrlMinor}}">{{page.title}}</a>		
+		<a href="{{page.title}}">{{page.title}}</a>		
 	</li>
     {% endif %}
 {% endfor %}
