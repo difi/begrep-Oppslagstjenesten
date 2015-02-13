@@ -46,7 +46,7 @@ Følgende forespørslser er tilgjengelig i Oppslagstjenesten for offentlige virk
 {% for page in sortedPages %}
     {% if page.group == "Oppslagstjenesten/Metode" %}
 	<li>	
-		<a href="{{}page.title}}">{{page.title}}</a>		
+		<a href="{{page.title}}">{{page.title}}</a>		
 	</li>
     {% endif %}
 {% endfor %}
