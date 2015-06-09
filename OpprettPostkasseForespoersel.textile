@@ -1,6 +1,6 @@
 ---
 layout: default
-title: OpprettSikkerDigitalPostkasseForespoersel
+title: OpprettPostkasseForespoersel
 headtitle: Begrepskatalog for Sikker digital post - 
 datatype: Metode
 Service: Oppslagstjenesten
