@@ -2,11 +2,9 @@
 layout: default
 title: Webservice sikkerhet
 headtitle: Oppslagstjenesten
-group: transportlag
+group: WS-security
 
-id: Transportlag/WebserviceSecurity
-
-next: Feilhåndtering
+id: WS-security/WebserviceSecurity
 
 
 ---
