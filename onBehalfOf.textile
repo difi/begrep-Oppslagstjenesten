@@ -1,0 +1,22 @@
+---
+layout: egenskap
+title: onBehalfOf
+headtitle: Begrepskatalog for Oppslagstypen - 
+group: Egenskap
+datatype: string
+---
+
+- Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
+- Term := {{page.title}}
+- Definisjon := Identifikasjon av en organisasjon
+- Datatype := "{{ page.datatype }}":http://www.w3.org/TR/xmlschema-2/#{{page.datatype}}
+- Kilde := DIFI
+- Kommentar := onBehalfOf er et gyldig organisasjonsnummer
+
+h3. Xml eksempel
+
+<pre>
+<DifiSecurity xmlns="http://kontaktinfo.difi.no/wsdl/oppslagstjeneste-16-02">
+  <OnBehalfOf>991825827</OnBehalfOf>
+</DifiSecurity>
+</pre>
