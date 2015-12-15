@@ -16,7 +16,7 @@ datatype: string
 h3. Xml eksempel
 
 <pre>
-<DifiSecurity xmlns="http://kontaktinfo.difi.no/wsdl/oppslagstjeneste-16-02">
-  <OnBehalfOf>991825827</OnBehalfOf>
-</DifiSecurity>
+<ns2:DifiSecurity>
+  <ns2:OnBehalfOf>991825827</ns2:OnBehalfOf>
+</ns2:DifiSecurity>
 </pre>

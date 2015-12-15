@@ -18,7 +18,7 @@ h3. Tjenestespesifikasjonen:
 * "XSD definisjon":xsd/oppslagstjeneste-ws-14-05.xsd
 * "XSD metadata":xsd/oppslagstjeneste-metadata-14-05.xsd
 * "XSD definisjon for fil eksport":xsd/kontaktregister-export-14-05.xsd
-* "Header: onBehalfOf":onBehalfOf.textile
+* "Egendefinert SOAP header: onBehalfOf":onBehalfOf.textile
 
 
 h3. Datamodell:
