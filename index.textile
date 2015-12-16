@@ -14,9 +14,9 @@ h3. Integrasjonsguide:
 
 h3. Tjenestespesifikasjonen:
 
-* "WSDL definisjon":xsd/oppslagstjeneste-ws-14-05.wsdl
-* "XSD definisjon":xsd/oppslagstjeneste-ws-14-05.xsd
-* "XSD metadata":xsd/oppslagstjeneste-metadata-14-05.xsd
+* "WSDL definisjon":xsd/oppslagstjeneste-ws-16-02.wsdl
+* "XSD definisjon":xsd/oppslagstjeneste-ws-16-02.xsd
+* "XSD metadata":xsd/oppslagstjeneste-metadata-16-02.xsd
 * "XSD definisjon for fil eksport":xsd/kontaktregister-export-14-05.xsd
 * "Egendefinert SOAP header: paaVegneAv":paaVegneAv.textile
 

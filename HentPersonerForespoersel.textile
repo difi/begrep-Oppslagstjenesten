@@ -33,6 +33,7 @@ table(table table-striped).
 | Kontaktinfo | Kontaktinfo gir informasjon om Person og Personers kontaktinformajon |
 | Sertifikat | Sertifikat gir informasjon om Person sitt sertifikat som skal brukes i forbindelse med kryptering av Sikker Digital Post |
 | SikkerDigitalPost | SikkerDigitalPost gir informasjon om Person, postkasse og postkasseleverandøren. |
+| VarslingsStatus | VarslingsStatus vil filtrere ut kontaktinformasjon, sertifikat og SikkerDigitalPost på personer med utgått kontaktinformasjon. Kontaktinformasjon er epost eller mobil. |
 
 Dersom Informasjonsbehov ikke sendes inn er standard verdi: Person
 Eventuell overflødig eller dobbel spesifikasjon av informasjonsbehov ignoreres.
@@ -44,6 +45,7 @@ h4. Xml eksempel
  <ns:informasjonsbehov>Kontaktinfo</ns:informasjonsbehov>
  <ns:informasjonsbehov>Sertifikat</ns:informasjonsbehov>
  <ns:informasjonsbehov>SikkerDigitalPost</ns:informasjonsbehov>
+ <ns:informasjonsbehov>VarslingsStatus</ns:informasjonsbehov>
  
  <ns:personidentifikator>01013355300</ns:personidentifikator>
  <ns:personidentifikator>01013355491</ns:personidentifikator>
