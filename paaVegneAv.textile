@@ -1,6 +1,6 @@
 ---
 layout: egenskap
-title: onBehalfOf
+title: paaVegneAv
 headtitle: Begrepskatalog for Oppslagstypen - 
 group: Egenskap
 datatype: string
@@ -11,12 +11,12 @@ datatype: string
 - Definisjon := Identifikasjon av en organisasjon
 - Datatype := "{{ page.datatype }}":http://www.w3.org/TR/xmlschema-2/#{{page.datatype}}
 - Kilde := DIFI
-- Kommentar := onBehalfOf er et gyldig organisasjonsnummer
+- Kommentar := paaVegneAv er et gyldig organisasjonsnummer
 
 h3. Xml eksempel
 
 <pre>
-<ns2:DifiSecurity>
-  <ns2:OnBehalfOf>991825827</ns2:OnBehalfOf>
-</ns2:DifiSecurity>
+   <Oppslagstjenesten xmlns="http://kontaktinfo.difi.no/wsdl/oppslagstjeneste-16-02">
+        <PaaVegneAv>991825827</PaaVegneAv>
+   </Oppslagstjenesten>
 </pre>
