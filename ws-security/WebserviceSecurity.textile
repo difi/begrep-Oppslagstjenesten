@@ -27,7 +27,7 @@ Meldingen er kun signert på SOAP nivå, ikke kryptert.
 
 h3. Timestamp
 
-* Time-to-live skal være ?
+* Time-to-live skal være 120 sekunder.
 
 
 h3. BinarySecurityToken
