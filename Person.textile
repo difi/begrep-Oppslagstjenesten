@@ -48,8 +48,18 @@ Ved SLETTET og IKKE_REGISTRERT har ikke registeret informasjon om Kontaktinfo el
 For oppslag av Person(er) er alle statuskoder relevante.
 For oppslag på endringer er kun status AKTIV og SLETTET relevant.   
 
-Ved å angi informasjonsbehov VarslingsStatus vil varslingstatus bli lagt på Person i responsen. Ved verdi KAN_IKKE_VARSLES på VarslingsStatus vil elementene Kontaktinformasjon, SikkerDigitalPostAdresse og X509Sertifikat filtreres bort og dermed ikke være med i responsen. Dersom varslingsstatus=KAN_VARSLES vil disse elementene bli inkludert i responsen på samme måte som når informasjonsbehov VarslingsStatus ikke er med i requesten.
+h4. varslingsstatus
 
+Ved å angi informasjonsbehov VarslingsStatus vil varslingstatus bli lagt på Person i responsen. Ved verdi KAN_IKKE_VARSLES på VarslingsStatus vil elementene Kontaktinformasjon, SikkerDigitalPostAdresse og X509Sertifikat filtreres bort og dermed ikke være med i responsen. Dersom varslingsstatus er lik KAN_VARSLES vil disse elementene bli inkludert i responsen på samme måte som når informasjonsbehov VarslingsStatus ikke er med i requesten. varslingsstatus elementet vil ikke bli lagt på Person i responsen om det ikke er etterspurt i requesten ved å legge inn informasjonsbehov "VarslingsStatus".
+
+table(table table-striped).
+|^.
+|_. Request |_. Datofelter i KRR |_\4. Utleverte <InformasjonsBehov> |
+|_. Metode |_.  |_. Kontaktinfo |_. SikkerDigitalPost |_. Sertifikat |_. VarslingsStatus |
+|-.
+| HentPerson | < 18 mnd | utleveres | utleveres | utleveres | KAN_VARSLES |
+| HentPerson | > 18 mnd | utleveres ikke | utleveres ikke | utleveres ikke | KAN_IKKE_VARSLES |
+| HentPerson (uten varslingsstatus)| < 18 mnd | utleveres | utleveres | utleveres | KAN_VARSLES |
 
 h4. Xml eksempler
 
@@ -71,6 +81,7 @@ h4. Xml eksempler
 </ns2:Person>
 </pre>
 
+Person med utgått kontaktinformasjon:
 <pre class="brush: xml; toolbar: false">
 <ns2:Person>
 	<ns2:personidentifikator>01012295312</ns2:personidentifikator>
