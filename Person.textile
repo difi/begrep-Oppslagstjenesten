@@ -54,12 +54,13 @@ Ved å angi informasjonsbehov VarslingsStatus vil varslingstatus bli lagt på Pe
 
 table(table table-striped).
 |^.
-|_. Request |_. Datofelter i KRR |_\4. Utleverte &lt;InformasjonsBehov\> |
+|_. Request |_. Datofelter i KRR |_\4. Utleverte &lt;InformasjonsBehov> |
 |_. Metode |_.  |_. Kontaktinfo |_. SikkerDigitalPost |_. Sertifikat |_. VarslingsStatus |
 |-.
 | HentPerson | < 18 mnd | utleveres | utleveres | utleveres | KAN_VARSLES |
 | HentPerson | > 18 mnd | utleveres ikke | utleveres ikke | utleveres ikke | KAN_IKKE_VARSLES |
-| HentPerson (uten varslingsstatus)| < 18 mnd | utleveres | utleveres | utleveres | KAN_VARSLES |
+| HentPerson (uten varslingsstatus)| vilkårlig | utleveres | utleveres | utleveres | utleveres ikke |
+| HentEndringer (lokal kopi)| vilkårlig | utleveres | utleveres | utleveres | utleveres ikke |
 
 h4. Xml eksempler
 
