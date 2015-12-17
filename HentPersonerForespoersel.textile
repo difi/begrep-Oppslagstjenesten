@@ -35,8 +35,8 @@ table(table table-striped).
 | SikkerDigitalPost | SikkerDigitalPost gir informasjon om Person, postkasse og postkasseleverandøren. |
 | VarslingsStatus | VarslingsStatus vil filtrere ut kontaktinformasjon, sertifikat og SikkerDigitalPost på personer med utgått kontaktinformasjon. Kontaktinformasjon er epost eller mobil. |
 
-Dersom Informasjonsbehov ikke sendes inn er standard verdi: Person
-Eventuell overflødig eller dobbel spesifikasjon av informasjonsbehov ignoreres.
+Dersom det ikke spesifiseres noen informasjonsbehov-element i forespørselen, vil standard responsverdi være Person.
+Eventuelle overflødige(ikke definerte) eller duplikate informasjonsbehov vil ignoreres.
 
 h4. Xml eksempel 
 

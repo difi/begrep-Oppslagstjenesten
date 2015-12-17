@@ -41,7 +41,7 @@ table(table table-striped).
 | SLETTET | Person er slettet fra registeret |
 | IKKE_REGISTRERT | Person finnes ikke i registeret |
 
-Ved AKTIV levers alle felter på Person ut, samt den øvrige informasjonen spesifisert i informasjonsbehovet dersom denne informasjonen finnes i registeret.
+Ved AKTIV levers alle felter på Person ut.
 
 Ved SLETTET og IKKE_REGISTRERT har ikke registeret informasjon om Kontaktinfo eller PostkasseInfo eller Sertifikat, og vil ikke kunne levere ut disse elementene selv om det er spesifisert i informasjonsbehov fra Offentlig virksomhet.  
 
@@ -50,7 +50,7 @@ For oppslag på endringer er kun status AKTIV og SLETTET relevant.
 
 h4. varslingsstatus
 
-Ved å angi informasjonsbehov VarslingsStatus vil varslingstatus bli lagt på Person i responsen. Ved verdi KAN_IKKE_VARSLES på VarslingsStatus vil elementene Kontaktinformasjon, SikkerDigitalPostAdresse og X509Sertifikat filtreres bort og dermed ikke være med i responsen. Dersom varslingsstatus er lik KAN_VARSLES vil disse elementene bli inkludert i responsen på samme måte som når informasjonsbehov VarslingsStatus ikke er med i requesten. varslingsstatus elementet vil ikke bli lagt på Person i responsen om det ikke er etterspurt i requesten ved å legge inn informasjonsbehov "VarslingsStatus".
+Ved å angi informasjonsbehov VarslingsStatus vil varslingstatus bli lagt på Person i responsen. Ved verdi KAN_IKKE_VARSLES på varslingstatus vil elementene Kontaktinformasjon, SikkerDigitalPostAdresse og X509Sertifikat filtreres bort og dermed ikke være med i responsen. Dersom varslingsstatus er lik KAN_VARSLES vil disse elementene være inkludert i responsen. varslingsstatus elementet vil ikke bli lagt på Person i responsen om det ikke er etterspurt i requesten ved å legge inn informasjonsbehov "VarslingsStatus".
 
 table(table table-striped).
 |^.
