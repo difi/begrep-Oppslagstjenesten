@@ -26,6 +26,7 @@ table(table table-striped).
 | "personidentifikator":/Felles/personidentifikator  | 1..1 |
 | "reservasjon":/Felles/reservasjon  | 0..1 |
 | "status":/Felles/status  | 0..1 |
+| "varslingsstatus":/Oppslagstjenesten/varslingsstatus  | 0..1 |
 | "Kontaktinformasjon":/Oppslagstjenesten/Kontaktinformasjon  | 0..1 |
 | "SikkerDigitalPostAdresse":/Oppslagstjenesten/SikkerDigitalPostAdresse | 0..1 |
 | "X509Sertifikat":/Felles/X509Sertifikat | 0..1 |
@@ -40,23 +41,35 @@ table(table table-striped).
 | SLETTET | Person er slettet fra registeret |
 | IKKE_REGISTRERT | Person finnes ikke i registeret |
 
-Ved AKTIV levers alle felter på Person ut, samt den øvrige informasjonen spesifisert i informasjonsbehovet dersom denne informasjonen finnes i registeret.
+Ved AKTIV levers alle felter på Person ut.
 
 Ved SLETTET og IKKE_REGISTRERT har ikke registeret informasjon om Kontaktinfo eller PostkasseInfo eller Sertifikat, og vil ikke kunne levere ut disse elementene selv om det er spesifisert i informasjonsbehov fra Offentlig virksomhet.  
 
 For oppslag av Person(er) er alle statuskoder relevante.
 For oppslag på endringer er kun status AKTIV og SLETTET relevant.   
 
+h4. varslingsstatus
 
+Ved å angi informasjonsbehov VarslingsStatus vil varslingstatus bli lagt på Person i responsen. Ved verdi KAN_IKKE_VARSLES på varslingstatus vil elementene Kontaktinformasjon, SikkerDigitalPostAdresse og X509Sertifikat filtreres bort og dermed ikke være med i responsen. Dersom varslingsstatus er lik KAN_VARSLES vil disse elementene være inkludert i responsen. varslingsstatus elementet vil ikke bli lagt på Person i responsen om det ikke er etterspurt i requesten ved å legge inn informasjonsbehov "VarslingsStatus".
 
+table(table table-striped).
+|^.
+|_. Request |_. Datofelter i KRR |_\4. Utleverte &lt;InformasjonsBehov> |
+|_. Metode |_.  |_. Kontaktinfo |_. SikkerDigitalPost |_. Sertifikat |_. VarslingsStatus |
+|-.
+| HentPerson | < 18 mnd | utleveres | utleveres | utleveres | KAN_VARSLES |
+| HentPerson | > 18 mnd | utleveres ikke | utleveres ikke | utleveres ikke | KAN_IKKE_VARSLES |
+| HentPerson (uten varslingsstatus)| vilkårlig | utleveres | utleveres | utleveres | utleveres ikke |
+| HentEndringer (lokal kopi)| vilkårlig | utleveres | utleveres | utleveres | utleveres ikke |
 
-h4. Xml eksempel
+h4. Xml eksempler
 
 <pre class="brush: xml; toolbar: false">
 <ns2:Person>
 	<ns2:personidentifikator>01012295312</ns2:personidentifikator>
 	<ns2:reservasjon>JA</ns2:reservasjon>
 	<ns2:status>AKTIV</ns2:status>
+	<ns2:varslingsstatus>KAN_VARSLES</ns2:varslingsstatus>
 	<ns2:Kontaktinformasjon>
 	   <ns2:Mobiltelefonnummer sistOppdatert="2014-02-25T13:08:00.000+01:00" sistVerifisert="2013-10-21T10:09:28.000+02:00">12121212</ns2:Mobiltelefonnummer>
 	   <ns2:Epostadresse sistOppdatert="2014-02-25T13:08:00.000+01:00" sistVerifisert="2013-10-21T10:09:28.000+02:00">01012295312_test@minid.difi.no</ns2:Epostadresse>
@@ -69,3 +82,13 @@ h4. Xml eksempel
 </ns2:Person>
 </pre>
 
+Person med utgått kontaktinformasjon:
+
+<pre class="brush: xml; toolbar: false">
+<ns2:Person>
+	<ns2:personidentifikator>01012295312</ns2:personidentifikator>
+	<ns2:reservasjon>NEI</ns2:reservasjon>
+	<ns2:status>AKTIV</ns2:status>
+	<ns2:varslingsstatus>KAN_IKKE_VARSLES</ns2:varslingsstatus>
+</ns2:Person>
+</pre>
