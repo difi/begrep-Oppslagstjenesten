@@ -8,7 +8,7 @@ datatype: string
 
 - Identifikator := "http://begrep.difi.no{{ page.url  | remove:".html" }}":{{page.title}}
 - Term := {{page.title}}
-- Definisjon := varslingsstatus gir en tekstlig beskrivelse av om bruker har utgått kontaktinformasjon eller ikke.
+- Definisjon := varslingsstatus gir en tekstlig beskrivelse av om bruker har utgått kontaktinformasjon eller ikke, ihht eForvaltningsforskriftens §32 andre ledd.
 - Datatype := "{{ page.datatype }}":http://www.w3.org/TR/xmlschema-2/#{{page.datatype}}
 - Kilde := DIFI
 - Kommentar := varslingsstatus blir brukt i Person.
@@ -20,7 +20,7 @@ h4. Kodeverk for varslingsstatus
 table(table table-striped).
 |_. Kodeverdi |_. Beskrivelse |
 | KAN_VARSLES | Person har ikke utgått kontaktinformasjon |
-| KAN_IKKE_VARSLES | Person har utgått kontaktinformasjon |
+| KAN_IKKE_VARSLES | Person har utgått kontaktinformasjon, er reservert, er slettet eller finnes ikke i registeret |
 
 h3. Xml eksempel
 
