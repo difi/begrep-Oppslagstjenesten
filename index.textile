@@ -14,6 +14,8 @@ h3. Integrasjonsguide:
 
 h3. Tjenestespesifikasjonen:
 
+Oppslagstjenesten for Kontakt- og Reservasjonsregisteret er en webservice, sikra med WS-security. Det må benyttes virksomhetssertifikater ihtt rammeverket for PKI i offentlig sektor for å få tilgang.
+
 * "WSDL definisjon":xsd/oppslagstjeneste-ws-16-02.wsdl
 * "XSD definisjon":xsd/oppslagstjeneste-ws-16-02.xsd
 * "XSD metadata":xsd/oppslagstjeneste-metadata-16-02.xsd
