@@ -25,7 +25,9 @@ table(table table-striped).
 | "postkasseadresse":/Felles/postkasseadresse | 1..1 | "xs:string":http://www.w3.org/TR/xmlschema-2/#string |
 | "X509Sertifikat":/Felles/X509Sertifikat | 0..1 | "X509Certifiate":http://www.w3.org/TR/xmldsig-core/#sec-X509Data |
 
+h4. Respons
 
+Responsen er en "OppdaterPostkasseRespons":OppdaterPostkasseRespons
 
 
 
