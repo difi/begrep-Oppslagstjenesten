@@ -49,8 +49,8 @@ Følgende elementer i SOAP meldingen signeres:
 
 h3. Krav til signeringssertifikat
 
-* Sertifikat for validering av signatur skal inkluderes i SOAP headerm representeret som et BinarySecurityToken.
-* Security Token være X509 sertifikater 
+* Sertifikat for validering av signatur skal inkluderes i SOAP header representeret som et BinarySecurityToken.
+* Security Token skal være X509 sertifikater
 * Sertifikatet som brukes skal være et virksomhetssertifikat ihht PKI-rammeverket for offentlig sektor
 ** sertifikatet skal være utstedt til behandlingsansvarlig eller databehandler.
 ** I testmiljøet brukes test-virksomhetssertifikat utstedt fra samme leverandører som i produksjon

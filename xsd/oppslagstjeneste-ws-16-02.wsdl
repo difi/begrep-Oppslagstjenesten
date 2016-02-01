@@ -97,7 +97,7 @@
 	<wsdl:service name="oppslagstjeneste-16-02">
 
         <wsdl:port binding="tns:oppslagstjeneste-16-02_SOAP12Binding" name="oppslagstjeneste_SOAP12">
-            <soap12:address location="/ws-v5" />
+            <soap12:address location="https://kontaktinfo-ws-ver2.difi.no/kontaktinfo-external/ws-v5" />
         </wsdl:port>
 	</wsdl:service>
 
