@@ -30,12 +30,13 @@ h4. Kodeverk for "informasjonsbehov":/Felles/informasjonsbehov
 table(table table-striped).
 |_. Kodeverdi |_. Beskrivelse |
 | Person | Person gir kun informasjon om Personen finnes i registeret og reservasjonsstatus. Person er implisitt og returneres alltid. |
-| Kontaktinfo | Kontaktinfo gir informasjon om Person og Personers kontaktinformajon |
+| Kontaktinfo | Kontaktinfo gir informasjon om Person og Personers kontaktinformasjon, dvs epost-addresse og mobiltelefonnummer |
 | Sertifikat | Sertifikat gir informasjon om Person sitt sertifikat som skal brukes i forbindelse med kryptering av Sikker Digital Post |
 | SikkerDigitalPost | SikkerDigitalPost gir informasjon om Person, postkasse og postkasseleverandøren. |
+| "VarslingsStatus":varslingsstatus | VarslingsStatus angir om Person kan varsles ihht eForvaltningsforskriften §32. Dette informasjonsbehovet trigger filtrering i Oppslagstjenesten, dvs. Kontaktinformasjon, Sertifikat og SikkerDigitalPost på personer med utgått kontaktinformasjon vil ikke bli utlevert. |
 
-Dersom Informasjonsbehov ikke sendes inn er standard verdi: Person
-Eventuell overflødig eller dobbel spesifikasjon av informasjonsbehov ignoreres.
+Dersom det ikke spesifiseres noen informasjonsbehov-element i forespørselen, vil standard responsverdi være Person.
+Eventuelle overflødige(ikke definerte) eller duplikate informasjonsbehov vil ignoreres.
 
 h4. Xml eksempel 
 
@@ -44,6 +45,7 @@ h4. Xml eksempel
  <ns:informasjonsbehov>Kontaktinfo</ns:informasjonsbehov>
  <ns:informasjonsbehov>Sertifikat</ns:informasjonsbehov>
  <ns:informasjonsbehov>SikkerDigitalPost</ns:informasjonsbehov>
+ <ns:informasjonsbehov>VarslingsStatus</ns:informasjonsbehov>
  
  <ns:personidentifikator>01013355300</ns:personidentifikator>
  <ns:personidentifikator>01013355491</ns:personidentifikator>

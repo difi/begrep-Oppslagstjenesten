@@ -30,11 +30,11 @@ h4. Kodeverk for "informasjonsbehov":/Felles/informasjonsbehov
 table(table table-striped).
 |_. Kodeverdi |_. Beskrivelse |
 | Person | Person gir kun informasjon om Personen finnes i registeret og reservasjonsstatus. Person er implisitt og returneres alltid. |
-| Kontaktinfo | Kontaktinfo gir informasjon om Person og Personers kontaktinformajon |
+| Kontaktinfo | Kontaktinfo gir informasjon om Personers kontaktinformasjon. Kontaktinformasjon er implisitt og returneres alltid. |
 | Sertifikat | Sertifikat gir informasjon om Person sitt sertifikat som skal brukes i forbindelse med kryptering av Sikker Digital Post |
 | SikkerDigitalPost | SikkerDigitalPost gir informasjon om Person, postkasse og postkasseleverandøren. |
 
-* Dersom Informasjonsbehov ikke sendes inn er standard verdi: Person
+* Dersom Informasjonsbehov ikke sendes inn er standard verdi: Person + Kontaktinfo
 * Eventuell overflødig eller dobbel spesifikasjon av informasjonsbehov ignoreres.
 
 h4. Xml eksempel 
